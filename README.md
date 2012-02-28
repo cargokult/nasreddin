@@ -11,11 +11,11 @@ A Don't Break the Chain Calendar. It feeds upon user's activity on github. [Nasr
 * Days with github activity should be marked.
 
 ## Tasks
-* create a hosted site for this *Done*
+* create a hosted site for this **Done**
 * identify current github user
 * clonned repo should identify the new user
-* query user github activity *Done*
-* map user activity on calendar days *Done*
+* query user github activity **Done**
+* map user activity on calendar days **Done**
 
 ## Open Issues
 * Use github api v3.
