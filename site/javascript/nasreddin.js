@@ -1,8 +1,14 @@
 $(document).ready(function() {
-	console.log("location.host: " + location.host);
+	var usernameParam = getParameterByName("username");
 	var matches = location.host.match(/(.*)\.github/);
-	console.log("Matches: " + matches);
-	var username = (matches != null && matches.length == 2) ? matches[1] : "github";
+	var username;
+	if (usernameParam != "") {
+		username = usernameParam;
+	} else if (matches != null && matches.length == 2) {
+		username = matches[1];
+	} else {
+		username = "github";
+	}
 	var user = gh.user(username);
 	user.allRepos(function (data) {
 		var events = [];
@@ -24,5 +30,17 @@ $(document).ready(function() {
 			editable: false,
 			events: events
 		});
+		$('#username').text(username);
 	});
 });
+
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+	var regexS = "[\\?&]" + name + "=([^&#]*)";
+	var regex = new RegExp(regexS);
+	var results = regex.exec(window.location.search);
+	if(results == null)
+		return "";
+	else
+		return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
