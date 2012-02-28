@@ -1,6 +1,6 @@
 $(document).ready(function() {
-	console.log("location.pathname: " + location.pathname);
-	var matches = location.pathname.match(/\/\/(.*)\.github/);
+	console.log("location.host: " + location.host);
+	var matches = location.host.match(/(.*)\.github/);
 	console.log("Matches: " + matches);
 	var username = (matches != null && matches.length == 2) ? matches[1] : "github";
 	var user = gh.user(username);
