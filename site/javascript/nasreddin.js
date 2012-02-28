@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	var username = "cargokult";
+	var matches = location.pathname.match(/\/\/(.*)\.github/);
+	var username = (matches != null && matches.length == 2) ? matches[1] : "github";
 	var user = gh.user(username);
 	user.allRepos(function (data) {
 		var events = [];
@@ -7,7 +8,8 @@ $(document).ready(function() {
 		data.repositories.forEach(function (repo) {
 		events[index] = {
 				title: repo.name,
-				start: repo.created_at
+				start: repo.created_at,
+				url: "https://github.com/" + username + "/" + repo.name
 				};
 		index++;
 		});
