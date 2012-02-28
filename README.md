@@ -1,6 +1,6 @@
 # About
 
-A Don't Break the Chain Calendar. It feeds upon user's activity on github.
+A Don't Break the Chain Calendar. It feeds upon user's activity on github. [Nasreddin](http://cargokult.github.com/nasreddin/) in action.
 
 ## Stories
 
@@ -11,18 +11,19 @@ A Don't Break the Chain Calendar. It feeds upon user's activity on github.
 * Days with github activity should be marked.
 
 ## Tasks
-* create a hosted site for this OK
+* create a hosted site for this *Done*
 * identify current github user
 * clonned repo should identify the new user
-* query user github activity OK
-* map user activity on calendar days
-* prettify the calendar view
+* query user github activity *Done*
+* map user activity on calendar days *Done*
 
 ## Open Issues
-* Is there a github api v3 javascript impl?
-* Which is the easiest way to publish on gh-pages? Please see scala_school and JavaScript-Garden.
+* Use github api v3.
+* Publish to gh-pages, don't push by hand.
+* Convert the date to user's local time.
 
-## References
-* http://www.persistenceunlimited.com/2007/09/seinfeld-says-dont-break-the-chain/
-* http://twitter.github.com/scala_school/
-* https://github.com/BonsaiDen/JavaScript-Garden
+## Resources
+* http://lifehacker.com/281626/jerry-seinfelds-productivity-secret
+* https://github.com/fitzgen/github-api
+* http://arshaw.com/fullcalendar/
+
