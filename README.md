@@ -1,4 +1,4 @@
-# About
+## About
 
 A [Don't Break the Chain Calendar](http://lifehacker.com/281626/jerry-seinfelds-productivity-secret). It feeds with user's activity on github. [Nasreddin](http://cargokult.github.com/nasreddin/) in action.
 
